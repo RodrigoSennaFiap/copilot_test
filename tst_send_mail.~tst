@@ -1,0 +1,32 @@
+PL/SQL Developer Test script 3.0
+8
+begin
+  -- Call the procedure
+  send_mail(p_to => :p_to,
+            p_from => :p_from,
+            p_message => :p_message,
+            p_smtp_host => :p_smtp_host,
+            p_smtp_port => :p_smtp_port);
+end;
+5
+p_to
+1
+rseoliveir@mapfre.com.br
+5
+p_from
+1
+rseoliveir@mapfre.com.br
+5
+p_message
+1
+teste
+5
+p_smtp_host
+1
+10.206.64.120
+5
+p_smtp_port
+1
+25
+4
+0

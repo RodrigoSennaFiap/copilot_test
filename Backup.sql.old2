@@ -1,0 +1,11 @@
+set pagesize 0
+set long 900000
+spool C:\temp\EA_K_231_MIGRACION_POLIZAS_VCR.sql
+select 'DBMS_METADATA.GET_DDL('||chr(39)||a.OBJECT_TYPE||chr(39)||','||chr(39)||a.OBJECT_NAME||chr(39)||','||chr(39)||a.OWNER||chr(39)||')' as script
+FROM dba_objects a
+where a.OBJECT_NAME = 'EA_K_231_MIGRACION_POLIZAS_VCR'
+and a.OWNER = 'TRON2000'
+and a.OBJECT_TYPE = 'PACKAGE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;  
+spool off
+exit;

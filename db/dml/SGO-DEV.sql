@@ -1,0 +1,10721 @@
+set pagesize 0
+set long 1000000000
+set longchunksize 1000000000
+set linesize 32767
+set trimspool ON
+set feedback off
+set heading off
+set echo off 
+set timing off
+set verify off
+begin
+   dbms_metadata.set_transform_param (dbms_metadata.session_transform, 'SQLTERMINATOR', true);
+   dbms_metadata.set_transform_param (dbms_metadata.session_transform, 'PRETTY', true);
+end;
+/
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000285909C00004$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000285909C00004$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CONDICION_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONDICION_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_DEPENDENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DEPENDENCIA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_DEPENDENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_DEPENDENCIA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_DOCUMENTO_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO_INSTANCIATX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_EVENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_EVENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_EVENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_EVENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_EXPRESION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_EXPRESION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_EXPRESIONID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_EXPRESIONID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROPIEDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PROPIEDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_FORMULARIO_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_FORMULARIO_PROPIEDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_FORMULARIO_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_FORMULARIO_PROPIEDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_INSTANCIATX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_INSTANCIATX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_LISTAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_LISTAS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_LISTAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_LISTAS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_NIVELROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000285936C00006$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000285936C00006$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_NIVELROL_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROL_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_CONSTRAINT_NAME.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONSTRAINT_NAME'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_ROL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_NIVELROLSUPERVISOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROLSUPERVISOR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_NIVELROLSUPERVISOR_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROLSUPERVISOR_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PARAMETRO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PARAMETRO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_TAREA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PASO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_TAREA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PASO_TAREA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_TAREA_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_PROC_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_PROC_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_PROC_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_PROC_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_CANAL_DIST_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CANAL_DIST_COT_AUTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0065119.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0065119'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_MODALIDAD_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_MODALIDAD_COT_AUTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0065122.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0065122'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_PROCESO_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PROCESO_COT_AUTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0065125.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0065125'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_PRODUCTO_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PRODUCTO_COT_AUTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0065128.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0065128'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_TIPVALPAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_TIPVALPAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_ADJUNTOS_CORREO_ERROR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_ADJUNTOS_CORREO_ERROR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_MPA_ADJUNTOS_CORREO_ERROR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_MPA_ADJUNTOS_CORREO_ERROR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_MPA_CORREO_ERROR1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_MPA_CORREO_ERROR1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_MPA_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_MPA_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_MPA_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_MPA_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKMPADOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKMPADOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_MENSAJES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_MENSAJES'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_MENSAJES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_MENSAJES'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_TXT_MENS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_TXT_MENS'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_TXT_MENS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_TXT_MENS'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_NOTIF.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NOTIF'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_NOTIF.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NOTIF'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_NOTIF_USU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NOTIF_USU'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_NOTIF_USU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NOTIF_USU'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_HIS_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_HIS_AUDITORIA'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_HIS_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_HIS_AUDITORIA'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_CANA_ORI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_ORI'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_CANA_ORI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_ORI'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_CANA_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_TAREA'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_CANA_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_TAREA'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_CANAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANAL'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_CANAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANAL'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_CANA_INI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_INI'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_CANA_INI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_CANA_INI'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_SERVIDOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SERVIDOR'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_SERVIDOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SERVIDOR'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_DOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_DOCUMENTAL'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_DOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_DOCUMENTAL'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_ATRIDOC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ATRIDOC'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_ATRIDOC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ATRIDOC'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_SOLDOC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOLDOC'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_SOLDOC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOLDOC'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_USER_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_USER_ROL'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_USER_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_USER_ROL'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_DIM_NEG.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DIM_NEG'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_DIM_NEG.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DIM_NEG'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_DAT_BITACORA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DAT_BITACORA'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_DAT_BITACORA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DAT_BITACORA'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_COD_INTERVINIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_COD_INTERVINIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_COD_NIVELROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_COD_NIVELROL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_COD_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_COD_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_CAT_ARB_FC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_CAT_ARB_FC'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_CAT_ARB_FC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_CAT_ARB_FC'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_EQUIVALE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_EQUIVALE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_REGLAS_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_REGLAS_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_NIVEL_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_NIVEL_ROL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_COL_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_COL_PROCESO'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_COL_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_COL_PROCESO'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_AUDITORIA'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_AUDITORIA'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_SOLUCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOLUCION'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_SOLUCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOLUCION'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_ENTORNO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ENTORNO'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_ENTORNO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ENTORNO'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_PROCESO'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_PROCESO'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_EJEC_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_EJEC_TAREA'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_EJEC_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_EJEC_TAREA'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_PROC_NEGO_TECN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_PROC_NEGO_TECN'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_PROC_NEGO_TECN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_PROC_NEGO_TECN'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_OPC_MENU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_OPC_MENU'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_OPC_MENU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_OPC_MENU'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_SOL_SERVICIOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOL_SERVICIOS'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_SOL_SERVICIOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_SOL_SERVICIOS'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_AUTORIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_AUTORIZACION'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_AUTORIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_AUTORIZACION'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_NIVELES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NIVELES'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_NIVELES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_NIVELES'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_DAT_ALARMAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DAT_ALARMAS'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_DAT_INCIDENCIAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_DAT_INCIDENCIAS'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_AUDITORIA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_AUDITORIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_AUDITORIA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_SERVICIO_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO_PARAMETRO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_SERVICIO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO_PASO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_TAREA_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA_FORMULARIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_VALORTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VALORTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_WM_ASIGNACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_ASIGNACIONTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_WM_TAREATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_TAREATX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ACTIVIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ACTIVIDAD_PROCESOPASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD_PROCESOPASO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_DENEGACI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_DENEGACI'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_DENEGACI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_DENEGACI'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_TRAZA_SOL_EST_ACC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_TRAZA_SOL_EST_ACC'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_TRAZA_SOL_TIPACC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_TRAZA_SOL_TIPACC'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_ID3_CUSTOMID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ID3_CUSTOMID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BKO_COTIZACION2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BKO_COTIZACION2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_TICODEEX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_TICODEEX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_REGLA_NEGOCIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_REGLA_NEGOCIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_ROL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_SERVICIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_TAREA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_VALORTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_VALORTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_TIPODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TIPODOCUMENTAL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_TIPODOCUMENTALID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_TIPODOCUMENTALID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_CANAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CANAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_CANAL_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CANAL_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_INCIDENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_INCIDENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_INCIDENTE_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_INCIDENTE_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_MARCOPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_MARCOPROCESO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_MARCOPROCESO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_MARCOPROCESO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PROCESO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_PROCESO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PROCESO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_PRODUCTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PRODUCTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_PRODUCTO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PRODUCTO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_RAMO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_RAMO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_RAMO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_RAMO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_SISTEMA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_SISTEMA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_SISTEMA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_SISTEMA_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_JERARQUIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_JERARQUIA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BR_JERARQUIA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_JERARQUIA_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PASO_TIPODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_TIPODOCUMENTAL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PASO_TIPODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PASO_TIPODOCUMENTAL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PASOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASOTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PASOTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASOTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_ATRIBUTODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_ATRIBUTODOCUMENTAL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PROCESO_ATRIBUTODOCUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PROCESO_ATRIBUTODOCUM'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PROCESO_PASO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_PASO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ROL_DIMENSION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL_DIMENSION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_SYS_C0077081.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0077081'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_SERVICIO_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO_PARAMETRO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_SERVICIO_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_SERVICIO_PARAMETRO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_SERVICIO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_SQL_INS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SQL_INS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_TAREA_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_TAREA_FORMULARIO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TAREA_FORMULARIO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_UNIONPASOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_UNIONPASOS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_UNIONPASOS_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_UNIONPASOS_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_VALORTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VALORTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000285974C00003$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000285974C00003$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_IDX$$_15DA0002.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_15DA0002'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_WM_ASIGNACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_ASIGNACIONTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_SYS_C0077107.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0077107'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_WM_TAREATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_TAREATX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_SYS_C0077109.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0077109'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_CAMPO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_COMPONENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_COMPONENTE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_CONDICION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_CUSTOMID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_CUSTOMID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_DEPENDENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_DEPENDENCIA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_EVENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_EVENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_INSTANCIATX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_NIVELROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_NIVELROL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_PARAMETRO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_PROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Packages\BPMAPP_MOTOR_REGLAS_NEGOCIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MOTOR_REGLAS_NEGOCIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Packages\BPMAPP_PACK_FSTDIN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PACK_FSTDIN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\PackagesBodies\BPMAPP_PACK_FSTDIN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PACK_FSTDIN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE BODY'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ASIGNACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ASIGNACIONTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_ESTILO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_FORMULARIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_PROCESO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_SERVICIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPOTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_COMPONENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_COMPONENTE'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONDICION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_DEPENDENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DEPENDENCIA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ESTILO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_EVENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_EVENTO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_FORMULARIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_FORMULARIO_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_FORMULARIO_PROPIEDAD'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_INSTANCIATX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_NIVELROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PARAMETRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PARAMETRO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PASO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_TAREA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PASOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASOTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_PASO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROPIEDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROPIEDAD'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_REGLA_NEGOCIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_REGLA_NEGOCIO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_REGLA_NEGOCIO_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_REGLA_NEGOCIO_CONDICION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_ACTIVIDADCOMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ACTIVIDADCOMENTARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_ACTIVCOMENT_LIST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ACTIVCOMENT_LIST'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CAMPOTXOBJ.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CAMPOTXOBJ'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONDICION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CONDICION_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONDICION_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_DEPENDENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DEPENDENCIA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_DEPENDENCIA_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DEPENDENCIA_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_ELEMENTO_BITACORA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ELEMENTO_BITACORA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_ESTILO_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ESTILO_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_EVENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EVENTO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_EVENTO_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EVENTO_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_FORMULARIO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FORMULARIO_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_FORMULARIO_PASO_LIST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FORMULARIO_PASO_LIST'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_PASO_SGTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PASO_SGTE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_PASO_SGTE_REFTAB.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PASO_SGTE_REFTAB'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_PASO_SRVTAR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PASO_SRVTAR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_PASO_SRVTAR_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PASO_SRVTAR_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_QUERYDYNAMIC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'QUERYDYNAMIC'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_BITACORA_LIST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BITACORA_LIST'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CAMPOPROPIEDADES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CAMPOPROPIEDADES'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CAMPOPROPIEDADES_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CAMPOPROPIEDADES_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_CAMPOTX_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CAMPOTX_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Types\spec\BPMAPP_QUERYDYNAMIC_LIST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'QUERYDYNAMIC_LIST'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_CONFIGURACION_BUZON.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CONFIGURACION_BUZON'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0019070.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0019070'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_RIESGOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RIESGOS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_ARGUMENTO_RIESGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ARGUMENTO_RIESGO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\PackagesBodies\BPMAPP_MOTOR_REGLAS_NEGOCIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MOTOR_REGLAS_NEGOCIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE BODY'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_RIESGOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RIESGOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_RIESGOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_RIESGOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_ARGUMENTO_RIESGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ARGUMENTO_RIESGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_DIN_DOC_DOC_INS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_DOC_DOC_INS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DIN_DOCUMENTO_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO_INSTANCIATX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BPM_MPA_HISTORICO_CAMPO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_HISTORICO_CAMPO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_VALORTX_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_VALORTX_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ACTIVIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_ACTIVIDAD_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_PROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ACTIVIDAD_PROCESOPASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD_PROCESOPASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_ACTIVIDAD_PROCESOPASO_PK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACTIVIDAD_PROCESOPASO_PK1'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ASIGNACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ASIGNACIONTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_ASIGNACIONTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ASIGNACIONTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SERVICIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_SERVICIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_CAMPO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ATRIBUTODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ATRIBUTODOCUMENTAL'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_ATRIBUTODOCUMENTALID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_ATRIBUTODOCUMENTALID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_CAMPO_ESTILO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_CAMPO_ESTILO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_CAMPO_FORMULARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_CAMPO_FORMULARIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_LISTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CAMPO_LISTA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_LISTA_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_PROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ATRIBUTODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ATRIBUTODOCUMENTAL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_ATRIBUTODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_ATRIBUTODOCUMENTAL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_TIPODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_TIPODOCUMENTAL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PASO_TIPODOCUMENTAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_TIPODOCUMENTAL'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CAMPO_PROCESO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_PROCESO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_SERVICIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_TAREA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CAMPO_TAREA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_TAREA_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CAMPOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPOTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_IDX$$_15DA0001.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_15DA0001'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CAMPOTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPOTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_COMPONENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_COMPONENTE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_COMPONENTE_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_COMPONENTE_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONDICION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_HISTORICO_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_HISTORICO_CORREO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IE_TEST_COD_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IE_TEST_COD_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IE_TEST_SRN_COD_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IE_TEST_SRN_COD_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTINCIDENTEBOVYYIV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTINCIDENTEBOVYYIV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_SOLICITUD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_CONTRATO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_CONTRATO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_REGIAO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_REGIAO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_SOLICITUD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_CONTRATO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_CONTRATO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BR_INCIDENTE_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_INCIDENTE_TLV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_SEQ_SOLICITUDESTX_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_SEQ_SOLICITUDESTX_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_SEQ_SOLICITUDESTX_UPDATE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_SEQ_SOLICITUDESTX_UPDATE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_SEQ_GESTION_ERRORES_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_SEQ_GESTION_ERRORES_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_SEQ_GESTION_ERRORES_UPDATE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_SEQ_GESTION_ERRORES_UPDATE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_VIEW_BPM_APER_SRN1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'VIEW_BPM_APER_SRN1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_PPROCESO_CAT_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_PPROCESO_CAT_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_CANENT_ORIGEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_CANENT_ORIGEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_PROCESO_CAT_CANENT_ORIG.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_PROCESO_CAT_CANENT_ORIG'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_PROCESO_CAT_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_PROCESO_CAT_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_PARCEI_ESTIPU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_PARCEI_ESTIPU'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_PROCESO_CAT_PARCEI_ESTI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_PROCESO_CAT_PARCEI_ESTI'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_PROCESO_CAT_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_PROCESO_CAT_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_PAREST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_PAREST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_RECQUE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_RECQUE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CLA123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CLA123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CETORG.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CETORG'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP\Synonyms\BTW_APP_BTW_GEN_ACCI_BTC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ACCI_BTC'
+and a.OWNER = 'BTW_APP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BTW_APP2\Synonyms\BTW_APP2_BTW_GEN_ACCI_BTC.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BTW_GEN_ACCI_BTC'
+and a.OWNER = 'BTW_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_NIVEL_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_NIVEL_ROL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_TELEFONE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_TELEFONE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_TELEFONE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_TELEFONE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBINCIDENTEBOVY02W.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBINCIDENTEBOVY02W'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0067917.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0067917'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTBSMDFMW.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTBSMDFMW'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CONSULTA_SOLICITUDESTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONSULTA_SOLICITUDESTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00034$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00034$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00033$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00033$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00032$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00032$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00031$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00031$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00030$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00030$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00029$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00029$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00028$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00028$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00027$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00027$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00026$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00026$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00025$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00025$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00024$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00024$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00023$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00023$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00022$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00022$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00021$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00021$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00020$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00020$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00019$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00019$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00018$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00018$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LOCALIZAR_CLIENTE_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LOCALIZAR_CLIENTE_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_PAGAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_PAGAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_RECLASIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_RECLASIFICACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_RECLASIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_RECLASIFICACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_RECLASIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_RECLASIFICACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SOLICITUD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SOLICITUD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_CONTRATO_MACRO_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_CONTRATO_MACRO_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_CONTRATO_MACRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_CONTRATO_MACRO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_CONTRATO_MACRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_CONTRATO_MACRO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_CATALOGO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_HISTORICO_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_HISTORICO_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_HISTORICO_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_HISTORICO_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_DATA_AUXILIAR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_DATA_AUXILIAR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_DATA_AUXILIAR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_DATA_AUXILIAR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_INT_DATA_AUXILIAR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_INT_DATA_AUXILIAR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_INT_DATA_AUXILIAR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_INT_DATA_AUXILIAR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBINCIDENTEBOVYYIV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBINCIDENTEBOVYYIV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0067713.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0067713'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTINCIDENTEBOZZYV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTINCIDENTEBOZZYV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTINCIDENTEBOVY02W.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTINCIDENTEBOVY02W'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FK_CD_CONSTRAINTS_COLS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FK_CD_CONSTRAINTS_COLS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DESIGNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DESIGNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MODELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MODELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MODEL_SUBVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MODEL_SUBVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MODEL_DISPLAYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MODEL_DISPLAYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_AVT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_AVT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_BUSINESS_INFO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_BUSINESS_INFO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CHANGE_REQUESTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CHANGE_REQUESTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CHANGE_REQUEST_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CHANGE_REQUEST_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CHECK_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CHECK_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CLASSIFICATION_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CLASSIFICATION_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_COLLECTION_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_COLLECTION_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONSTR_INDEX_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONSTR_INDEX_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONSTR_FK_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONSTR_FK_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONTACTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONTACTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONTACT_EMAILS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONTACT_EMAILS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONTACT_LOCATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONTACT_LOCATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONTACT_RES_LOCATORS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONTACT_RES_LOCATORS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CONTACT_TELEPHONES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CONTACT_TELEPHONES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_COLUMN_UI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_COLUMN_UI'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DATA_FLOW_DIAGRAM_INFOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DATA_FLOW_DIAGRAM_INFOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOCUMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOCUMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOCUMENT_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOCUMENT_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOMAINS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOMAINS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOMAIN_AVT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOMAIN_AVT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOMAIN_CHECK_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOMAIN_CHECK_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DOMAIN_VALUE_RANGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DOMAIN_VALUE_RANGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DIAGRAM_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DIAGRAM_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DIAGRAMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DIAGRAMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DISTINCT_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DISTINCT_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EMAILS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EMAILS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ENTITYVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ENTITYVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EVENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EVENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EXTERNAL_AGENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EXTERNAL_AGENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EXT_AGENT_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EXT_AGENT_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EXT_AGENT_EXT_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EXT_AGENT_EXT_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_EXTERNAL_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_EXTERNAL_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TELEFONE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TELEFONE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_TELEFONO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_TELEFONO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_TELEFONO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_TELEFONO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKMP_BPM_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKMP_BPM_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_TRA_CONTADOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_TRA_CONTADOR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_TRA_CONTADOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_TRA_CONTADOR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_TEMP_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_TEMP_ROL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CPF.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CPF'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_T_PASOSID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_PASOSID'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_T_PROCESOSID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_PROCESOSID'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_COMPONENTE_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_COMPONENTE_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_CONDICION_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_CONDICION_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_DEPENDENCIA_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_DEPENDENCIA_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_ESTILO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_ESTILO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_EVENTO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_EVENTO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_FORMULARIO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_FORMULARIO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_INSTANCIATX_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_INSTANCIATX_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_NIVELROL_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_NIVELROL_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_QUEST_SL_TEMP_EXPLAIN1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'QUEST_SL_TEMP_EXPLAIN1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_DOC_DOC_INS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_DOC_DOC_INS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_SEGURIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SEGURIDAD'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_NOTIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_NOTIFICACION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PROCESO_NOTIFICACION_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_NOTIFICACION_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ACEPTACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACEPTACIONTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_ACEPTACIONTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACEPTACIONTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Sequences\BPMAPP_SEQ_DIN_ACEPTACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SEQ_DIN_ACEPTACIONTX'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SEQUENCE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_CONSULTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONSULTA'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PROCESO_CONSULTA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONSULTA_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRS_INSTALLATION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_INSTALLATION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_REPORTS_VERSION_1_0.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_REPORTS_VERSION_1_0'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DESIGNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DESIGNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MODELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MODELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MODEL_SUBVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MODEL_SUBVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MODEL_DISPLAYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MODEL_DISPLAYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_AVT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_AVT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_BUSINESS_INFO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_BUSINESS_INFO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CHANGE_REQUESTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CHANGE_REQUESTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CHANGE_REQUEST_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CHANGE_REQUEST_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CHECK_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CHECK_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CLASSIFICATION_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CLASSIFICATION_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_CAT_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_CLASSIF123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_CAT_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_CAT_CLASSIF123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_REASIG_TRAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_REASIG_TRAT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_REASIG_TRAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_REASIG_TRAT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_REASIG_TRAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_REASIG_TRAT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_GLOSSARY_TERMS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'GLOSSARY_TERMS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_GLOSSARIES_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'GLOSSARIES_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_REPORT_TEMPLATE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'REPORT_TEMPLATE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_OBJECTS_LIST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'OBJECTS_LIST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBINCIDENTEBOZZYV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBINCIDENTEBOZZYV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0072514.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0072514'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_SRN_TRIAGGE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_SRN_TRIAGGE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_COTIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_COTIZACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPMMPAST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPMMPAST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_ARGUMENTOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ARGUMENTOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DIMENSION_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DIMENSION_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_FACT_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_FACT_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_FACT_ENTITIES_JOINS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_FACT_ENTITIES_JOINS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_HIERARCHIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_HIERARCHIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_HIERARCHY_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_HIERARCHY_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_HIERARCHY_ROLLUP_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_HIERARCHY_ROLLUP_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LEVEL_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LEVEL_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MEASURE_AGGR_FUNCS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MEASURE_AGGR_FUNCS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_AGGR_FUNC_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_AGGR_FUNC_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_AGGR_FUNC_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_AGGR_FUNC_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MEASURE_FOLDERS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MEASURE_FOLDERS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MEASURE_FOLDER_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MEASURE_FOLDER_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RAGGED_HIER_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RAGGED_HIER_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RAGGED_HIER_LINK_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RAGGED_HIER_LINK_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ROLLUP_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ROLLUP_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ROLLUP_LINK_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ROLLUP_LINK_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SLICES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SLICES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SLICE_DIM_HIER_LEVEL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SLICE_DIM_HIER_LEVEL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SLICE_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SLICE_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TABLE_INCLUDE_SCRIPTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TABLE_INCLUDE_SCRIPTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TELEPHONES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TELEPHONES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TRANSFORMATION_PACKAGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TRANSFORMATION_PACKAGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TRANSFORMATION_TASKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TRANSFORMATION_TASKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TRANSFORMATION_TASK_INFOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TRANSFORMATION_TASK_INFOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_MPA_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_MPA_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TRANSFORMATION_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TRANSFORMATION_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TRANSFORMATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TRANSFORMATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_VALUE_RANGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_VALUE_RANGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_VIEW_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_VIEW_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_VIEW_CONTAINERS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_VIEW_CONTAINERS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_VIEW_ORDER_GROUPBY.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_VIEW_ORDER_GROUPBY'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LARGE_TEXT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LARGE_TEXT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_CUSAUXOCU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_CUSAUXOCU'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MODEL_NAMING_OPTIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MODEL_NAMING_OPTIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ATTRIBUTES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ATTRIBUTES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BUSINESS_INFO_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BUSINESS_INFO_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CHANGE_REQUESTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CHANGE_REQUESTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CHANGE_REQ_ELEMENTS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CHANGE_REQ_ELEMENTS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CHANGE_REQ_ELEMENTS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CHANGE_REQ_ELEMENTS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CLASS_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CLASS_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ADDITIONAL_CLASS_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ADDITIONAL_CLASS_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DMRS_COLL_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_COLL_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_COLUMNS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'COLUMNS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_COLUMNS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'COLUMNS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_PASOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASOTX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_COLUMN_GROUPS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'COLUMN_GROUPS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_COLUMN_UI_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'COLUMN_UI_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONSTR_INDEX_COLUMNS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONSTR_INDEX_COLUMNS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKDOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKDOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN_TRIAGGE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_TRIAGGE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_INT_ANEXO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_INT_ANEXO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_INT_ANEXO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_INT_ANEXO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_WM_TAREATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_TAREATX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_LISTAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_LISTAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_ADICIONAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_ADICIONAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_ADICIONAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_ADICIONAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_PAGAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_PAGAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_PAGAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_PAGAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_RELACION_PROCESO_PASO_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESO_PASO_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_RELACION_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_RELACION_PROCESO_PASO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_RELACION_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESO_PASO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_RELACION_PROCESOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_RELACION_PROCESOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_RELACION_PROCESO_PASO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESO_PASO_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_RELACION_PROCESOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_RELACION_PROCESOS_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESOS_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_RELACION_PROCESOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESOS'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_RELACION_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESO_PASO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_REGLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_REGLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_REGLAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_REGLAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00017$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00017$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00016$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00016$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398183C00015$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398183C00015$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CONSULTA_SOLICITUDESTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONSULTA_SOLICITUDESTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CATEGORIZACION_ERRORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CATEGORIZACION_ERRORES'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_CATEGORIZACION_ERRORES_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CATEGORIZACION_ERRORES_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_GESTION_ERRORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_GESTION_ERRORES'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398227C00015$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398227C00015$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398227C00014$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398227C00014$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000398227C00013$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000398227C00013$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_GESTION_ERRORES_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_GESTION_ERRORES_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_ROL_DINAMICO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL_DINAMICO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_ROL_DINAMICO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL_DINAMICO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_ROL_DINAMICO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_ROL_DINAMICO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CATEGORIZACION_ERRORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CATEGORIZACION_ERRORES'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CONSULTA_SOLICITUDESTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONSULTA_SOLICITUDESTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_GESTION_ERRORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_GESTION_ERRORES'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ROL_DINAMICO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL_DINAMICO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBBPPJ2XH.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBBPPJ2XH'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0076451.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0076451'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTBPPJ2XH.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTBPPJ2XH'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_LOCALIZAR_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LOCALIZAR_CLIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TEST_SRN_INPUT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TEST_SRN_INPUT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SPAM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SPAM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SPAM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SPAM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_TABLE_NAME.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLE_NAME'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_ADJUNTOS_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ADJUNTOS_CORREO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_COMENTARIO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CORREO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_INTERVENCION'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_NIVEL_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_NIVEL_ROL'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_PAGAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_PAGAMENTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_RECLASIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_RECLASIFICACION'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SOLICITUD'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_SPAM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SPAM'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_SRN_TRIAGGE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_TRIAGGE'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_TELEFONE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TELEFONE'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRATAMENTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZABILIDAD'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_APER_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_CATALOGO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BPM_TRA_CONTADOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_TRA_CONTADOR'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_CANAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CANAL'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_CANAL_DIST_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CANAL_DIST_COT_AUTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_CONFIGURACION_BUZON.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_CONFIGURACION_BUZON'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_INCIDENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_INCIDENTE'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_INCIDENTE_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_INCIDENTE_TLV'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_JERARQUIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_JERARQUIA'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_MARCOPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_MARCOPROCESO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_MODALIDAD_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_MODALIDAD_COT_AUTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PROCESO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_PROCESO_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PROCESO_COT_AUTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_PRODUCTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PRODUCTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_PRODUCTO_COT_AUTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_PRODUCTO_COT_AUTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_RAMO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_RAMO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BR_SISTEMA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BR_SISTEMA'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_DIN_DOCUMENTO_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO_INSTANCIATX'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_DOCUMENTO_CLIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOCUMENTO_CLIENTE'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_WMBBPPJ2XH.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBBPPJ2XH'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_T_TASK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_TASK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_INSTANCIATX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Packages\BPMAPP_PP_UTILIDADES_SGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PP_UTILIDADES_SGO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\PackagesBodies\BPMAPP_PP_UTILIDADES_SGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PP_UTILIDADES_SGO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE BODY'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Packages\BPMAPP_PKG_PENDIENTE_SGO_DIN_EDITOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PKG_PENDIENTE_SGO_DIN_EDITOR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\PackagesBodies\BPMAPP_PKG_PENDIENTE_SGO_DIN_EDITOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PKG_PENDIENTE_SGO_DIN_EDITOR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'PACKAGE BODY'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_CAMPO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_CAMPO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_RELACION_PROCESOS_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_RELACION_PROCESOS_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_ENVIO_RESOLUTION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ENVIO_RESOLUTION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_LISTAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_LISTAS'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DCO_CONFIG.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DCO_CONFIG'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_CAMPOTX_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_CAMPOTX_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_NOMBRE_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_NOMBRE_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_ENVIO_RESOLUTION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ENVIO_RESOLUTION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_ENVIO_RESOLUTION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_ENVIO_RESOLUTION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKMP_BPM_MPA_NOMBRE_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKMP_BPM_MPA_NOMBRE_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_HISTORICO_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_HISTORICO_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_SPAM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_SPAM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_SPAM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_SPAM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MEASURE_AGGR_FUNCS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MEASURE_AGGR_FUNCS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_AGGR_FUNC_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_AGGR_FUNC_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_AGGR_FUNC_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_AGGR_FUNC_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MEASURE_FOLDERS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MEASURE_FOLDERS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MEASURE_FOLDER_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MEASURE_FOLDER_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RAGGED_HIER_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RAGGED_HIER_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RAGGED_HIER_LINK_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RAGGED_HIER_LINK_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ROLLUP_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ROLLUP_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ROLLUP_LINK_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ROLLUP_LINK_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_NIVEL_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'NIVEL_SERVICIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SLICES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SLICES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SLICE_DIM_HIER_LEVEL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SLICE_DIM_HIER_LEVEL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SLICE_MEASURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SLICE_MEASURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TABLE_INCLUDE_SCRIPTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TABLE_INCLUDE_SCRIPTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TASK_PARAMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TASK_PARAMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TASK_PARAMS_ITEMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TASK_PARAMS_ITEMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TELEPHONES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TELEPHONES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TRANSFORMATION_PACKAGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TRANSFORMATION_PACKAGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TRANSFORMATION_TASKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TRANSFORMATION_TASKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TRANSFORMATION_TASK_INFOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TRANSFORMATION_TASK_INFOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TRANSFORMATION_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TRANSFORMATION_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TRANSFORMATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TRANSFORMATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_VALUE_RANGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_VALUE_RANGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_VIEW_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_VIEW_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_VIEW_CONTAINERS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_VIEW_CONTAINERS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_VIEW_ORDER_GROUPBY.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_VIEW_ORDER_GROUPBY'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LARGE_TEXT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LARGE_TEXT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MODEL_NAMING_OPTIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MODEL_NAMING_OPTIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MEASUREMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MEASUREMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SCHEMA_OBJECT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SCHEMA_OBJECT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DYNAMIC_PROPERTIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DYNAMIC_PROPERTIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TABLE_ARCS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TABLE_ARCS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ENTITY_ARCS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ENTITY_ARCS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SENSITIVE_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SENSITIVE_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TSDP_POLICIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TSDP_POLICIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TSDP_SUB_POLICIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TSDP_SUB_POLICIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MASK_TEMPLATES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MASK_TEMPLATES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXISTENCE_DEP.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXISTENCE_DEP'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXISTENCE_DEP_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXISTENCE_DEP_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FK_CD_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FK_CD_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_PARAMETRO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_PARAMETRO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_PASO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_PASO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_PASOTX_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_PASOTX_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_PROCESO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_PROCESO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_ROL_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_ROL_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_SERVICIO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_SERVICIO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_SEQ_TAREA_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_SEQ_TAREA_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_ROLES_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_ROLES_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IX2_BKO_REGVINCULO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IX2_BKO_REGVINCULO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_NIVEL_SERVICIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'NIVEL_SERVICIO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_NIVEL_ROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_NIVEL_ROL'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_SRN_TRIAGGE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_TRIAGGE'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_REGIAO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_REGIAO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_INFO_CADAS_PARCEI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_CADAS_PARCEI'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKINFO_CADAS_PARCEI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKINFO_CADAS_PARCEI'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_CONFIG_REPORTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CONFIG_REPORTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ADICIONAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ADICIONAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHY_LEVELS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHY_LEVELS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHY_LEVELS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHY_LEVELS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHY_ROLLUP_LINKS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHY_ROLLUP_LINKS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHY_ROLLUP_LINKS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHY_ROLLUP_LINKS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEXES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEXES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEXES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEXES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STORES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STORES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STORES_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STORES_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STRUCTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STRUCTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STRUCTS_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STRUCTS_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STRUCT_ATTR_FK_ISTR_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STRUCT_ATTR_FK_ISTR_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INFO_STRUCT_ATTR_FK_ATTR_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_STRUCT_ATTR_FK_ATTR_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TASK_PARAMS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TASK_PARAMS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TASK_PARAMS_FK_TASK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TASK_PARAMS_FK_TASK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TASK_PARAMS_ITEMS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TASK_PARAMS_ITEMS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TASK_PARAMS_ITEMS_FK_PARS_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TASK_PARAMS_ITEMS_FK_PARS_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_KEYS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'KEYS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_KEYS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'KEYS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_KEY_ATTRIBUTES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'KEY_ATTRIBUTES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_KEY_ELEMENTS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'KEY_ELEMENTS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LEVELS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LEVELS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LEVELS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LEVELS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LEVEL_ATTRS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LEVEL_ATTRS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LOCATIONS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LOCATIONS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LOGICAL_TO_NATIVE_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LOGICAL_TO_NATIVE_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_LOGICAL_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'LOGICAL_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DMRS_LARGE_TEXT_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LARGE_TEXT_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPING_TARGETS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPING_TARGETS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPING_TARGETS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPING_TARGETS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPING_TARGET_SOURCES_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPING_TARGET_SOURCES_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPING_TARGET_SOURCES_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPING_TARGET_SOURCES_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPING_TARGET_SOURCES_FK3_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPING_TARGET_SOURCES_FK3_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURE_AGGR_FUNCS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURE_AGGR_FUNCS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_AGGR_FUNC_DIMENSIONS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'AGGR_FUNC_DIMENSIONS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_AGGR_FUNC_LEVELS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'AGGR_FUNC_LEVELS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURE_FOLDERS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURE_FOLDERS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURE_FOLDERS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURE_FOLDERS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MEASURE_FOLDER_MEAS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MEASURE_FOLDER_MEAS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODELS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODELS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODEL_SUBVIEWS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODEL_SUBVIEWS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODEL_SUBVIEWS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODEL_SUBVIEWS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODEL_DISPLAYS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODEL_DISPLAYS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODEL_DISPLAYS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODEL_DISPLAYS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODEL_NAMING_OPTIONS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODEL_NAMING_OPTIONS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_NATIVE_TO_LOGICAL_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'NATIVE_TO_LOGICAL_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_NOTES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'NOTES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_NOTES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'NOTES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_OID_COLUMNS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_OID_COLUMNS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_OID_COLUMNS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_OID_COLUMNS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PROCESS_ATTRS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PROCESS_ATTRS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PROCESS_ENTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PROCESS_ENTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PROCESSES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PROCESSES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PROCESSES_FK_DIAGRAM_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PROCESSES_FK_DIAGRAM_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RAGGED_HIER_LINKS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RAGGED_HIER_LINKS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RAGGED_HIER_LINKS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RAGGED_HIER_LINKS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_LIST_SOL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_LIST_SOL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_LIST_SOL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_LIST_SOL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_INTEGRACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_INTEGRACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_INTEGRACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_INTEGRACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_INTEGRACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_INTEGRACION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_COTIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_COTIZACION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_BKO_COTIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_COTIZACION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BKO_ARGUMENTOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ARGUMENTOS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_BKO_ARGUMENTOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ARGUMENTOS'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_PACK_DINBR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PACK_DINBR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_PACK_DINBR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PACK_DINBR'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_PASO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_WM_ASIGNACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_WM_ASIGNACIONTX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_CAMPOTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPOTX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_VALORTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VALORTX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_CTVA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_CTVA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_CTVA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_CTVA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IDX$$_474AE0001.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_474AE0001'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IDX$$_474B80001.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_474B80001'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IDX$$_474AE0002.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_474AE0002'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SRN_INTERVINIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SRN_INTERVINIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Synonyms\BPMAPP_BR_DIN_ACEPTACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACEPTACIONTX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ESTRUCTURA_PDF.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ESTRUCTURA_PDF'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_CAT_CLAPDR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_CAT_CLAPDR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_CLA123_VE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_CLA123_VE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_AUX_TIPCATVAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_AUX_TIPCATVAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_AUX_CLAPDR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_AUX_CLAPDR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_PRESTADOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_PRESTADOR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_NUMMA_ATENDENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_NUMMA_ATENDENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_REGLA_TIPREGP.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_REGLA_TIPREGP'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_ROLABA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_ROLABA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_PRESTADOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_PRESTADOR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_MPA_NUMMA_ATENDENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_MPA_NUMMA_ATENDENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_VEACCEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_VEACCEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_SCATCLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_SCATCLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_CAENTEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_CAENTEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_COMVEEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_COMVEEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_CTSVEEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_CTSVEEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_PARVEEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_PARVEEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_RECVEEST.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_RECVEEST'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_TEMP_MCAROL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_TEMP_MCAROL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ACOMPANHA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ACOMPANHA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_IDX$$_474AE0003.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX$$_474AE0003'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_USUARIO_EXTERNO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_USUARIO_EXTERNO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_USUARIO_EXTERNO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_USUARIO_EXTERNO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_PERSONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PERSONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_SRV_SEGMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_SRV_SEGMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_SRV_SEGMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_SRV_SEGMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_IDX1_PROCESOID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX1_PROCESOID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_IDX2_INSTANCIAID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX2_INSTANCIAID'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONSTR_FK_COLUMNS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONSTR_FK_COLUMNS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONTACT_EMAILS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONTACT_EMAILS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONTACTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONTACTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_EQUIVALE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_EQUIVALE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONTACT_LOCATIONS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONTACT_LOCATIONS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONTACT_RES_LOCATORS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONTACT_RES_LOCATORS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CONTACT_TELEPHONES_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CONTACT_TELEPHONES_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CUBES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CUBES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CUBES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CUBES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CUBE_DIMENSIONS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CUBE_DIMENSIONS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CUBE_DIMENSIONS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CUBE_DIMENSIONS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DESIGNS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DESIGNS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAMS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAMS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAMS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAMS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAM_ELEMENTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAM_ELEMENTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAM_ELEMENTS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAM_ELEMENTS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DFD_INFOS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DFD_INFOS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DFD_INFOS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DFD_INFOS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIMENSIONS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIMENSIONS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIMENSIONS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIMENSIONS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIMENSION_CALC_ATTRS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIMENSION_CALC_ATTRS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIMENSION_LEVELS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIMENSION_LEVELS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DISTINCT_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DISTINCT_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOCUMENTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOCUMENTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOCUMENT_ELEMENTS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOCUMENT_ELEMENTS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOCUMENT_ELEMENTS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOCUMENT_ELEMENTS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAINS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAINS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAINS_PK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAINS_PK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAINS_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAINS_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAIN_AVT_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAIN_AVT_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAIN_CHECK_CONSTR_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAIN_CHECK_CONSTR_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DOMAIN_VALUE_RANGES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DOMAIN_VALUE_RANGES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EMAILS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EMAILS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITIES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITIES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITIES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITIES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITIES_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITIES_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITYVIEWS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITYVIEWS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITYVIEWS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITYVIEWS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CLASSIF123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EVENTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EVENTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EVENTS_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EVENTS_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EVENTS_FK_FLOW_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EVENTS_FK_FLOW_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENTS_FK_DIAGRAM_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENTS_FK_DIAGRAM_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENT_EXT_DATAS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENT_EXT_DATAS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENT_EXT_DATAS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENT_EXT_DATAS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENT_FLOWS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENT_FLOWS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_AGENT_FLOWS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_AGENT_FLOWS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_DATAS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_DATAS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXT_DATAS_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXT_DATAS_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FACT_ENTITIES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FACT_ENTITIES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FACT_ENTITIES_JOINS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FACT_ENTITIES_JOINS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FLOWS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FLOWS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FLOWS_FK_DIAGRAM_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FLOWS_FK_DIAGRAM_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FLOW_INFO_STRUCTS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FLOW_INFO_STRUCTS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FLOW_INFO_STRUCTS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FLOW_INFO_STRUCTS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FOREIGNKEYS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FOREIGNKEYS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FOREIGNKEYS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FOREIGNKEYS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHIES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHIES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_HIERARCHIES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'HIERARCHIES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RAGGED_HIER_LINK_ATTRS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RAGGED_HIER_LINK_ATTRS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RDBMS_SITES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RDBMS_SITES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RECORD_STRUCTS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RECORD_STRUCTS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RECORD_STRUCTS_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RECORD_STRUCTS_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_REC_STRUCT_EXT_DATAS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'REC_STRUCT_EXT_DATAS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_REC_STRUCT_EXT_DATAS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'REC_STRUCT_EXT_DATAS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RELATIONSHIPS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RELATIONSHIPS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RELATIONSHIPS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RELATIONSHIPS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RELATIONSHIPS_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RELATIONSHIPS_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RELATIONSHIPS_FK_IDXV2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RELATIONSHIPS_FK_IDXV2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RESOURCE_LOCATORS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RESOURCE_LOCATORS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RESPONSIBLE_PARTIES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RESPONSIBLE_PARTIES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RES_PARTY_CONTACTS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RES_PARTY_CONTACTS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RES_PARTY_CONTACTS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RES_PARTY_CONTACTS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RES_PARTY_ELEMENTS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RES_PARTY_ELEMENTS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_RES_PARTY_ELEMENTS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'RES_PARTY_ELEMENTS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLES_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLES_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLE_PROCESSES_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLE_PROCESSES_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLE_PROCESSES_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLE_PROCESSES_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_CANENT_ORIGEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_CANENT_ORIGEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_PARCEI_ESTIPU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_PARCEI_ESTIPU'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_CANENT_ORIGEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_CANENT_ORIGEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_PARCEI_ESTIPU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_PARCEI_ESTIPU'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLLUP_LINKS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLLUP_LINKS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLLUP_LINKS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLLUP_LINKS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ROLLUP_LINK_ATTRS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ROLLUP_LINK_ATTRS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SLICES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SLICES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SLICES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SLICES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SLICE_DIM_HIER_LEVEL_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SLICE_DIM_HIER_LEVEL_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SLICE_MEASURES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SLICE_MEASURES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SOURCE_INFO_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SOURCE_INFO_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SPATIAL_COL_DEFINITION_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SPATIAL_COL_DEFINITION_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SPATIAL_COL_DEFINITION_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SPATIAL_COL_DEFINITION_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SPATIAL_DIMENSIONS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SPATIAL_DIMENSIONS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_STRUCTURED_TYPES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'STRUCTURED_TYPES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_STRUCT_TYPE_ATTRS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'STRUCT_TYPE_ATTRS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_STRUCT_TYPE_METHODS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'STRUCT_TYPE_METHODS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_STRUCT_TYPE_METHOD_PARS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'STRUCT_TYPE_METHOD_PARS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLES_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLES_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLES_FK_IDXV1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLES_FK_IDXV1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLEVIEWS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLEVIEWS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLEVIEWS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLEVIEWS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLE_CONSTRAINTS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLE_CONSTRAINTS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_KEY_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_KEY_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LOCATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LOCATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LOGICAL_TO_NATIVE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LOGICAL_TO_NATIVE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LOGICAL_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LOGICAL_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MAPPINGS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MAPPINGS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MAPPING_TARGETS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MAPPING_TARGETS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_MAPPING_TARGET_SOURCES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_MAPPING_TARGET_SOURCES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_NATIVE_TO_LOGICAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_NATIVE_TO_LOGICAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_NOTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_NOTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_FECAPER.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_FECAPER'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_PK_OID_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_PK_OID_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_PROCESS_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_PROCESS_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_PROCESS_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_PROCESS_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_PROCESSES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_PROCESSES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RDBMS_SITES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RDBMS_SITES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RECORD_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RECORD_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RECORD_STRUCT_EXT_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RECORD_STRUCT_EXT_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RELATIONSHIPS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RELATIONSHIPS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RESOURCE_LOCATORS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RESOURCE_LOCATORS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RESPONSIBLE_PARTIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RESPONSIBLE_PARTIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RES_PARTY_CONTACTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RES_PARTY_CONTACTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_RES_PARTY_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_RES_PARTY_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ROLES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ROLES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ROLE_PROCESSES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ROLE_PROCESSES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SOURCE_INFO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SOURCE_INFO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SPATIAL_COLUMN_DEFINITION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SPATIAL_COLUMN_DEFINITION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_SPATIAL_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_SPATIAL_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_STRUCTURED_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_STRUCTURED_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_STRUCT_TYPE_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_STRUCT_TYPE_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_STRUCT_TYPE_METHODS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_STRUCT_TYPE_METHODS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_STRUCT_TYPE_METHOD_PARS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_STRUCT_TYPE_METHOD_PARS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TABLES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TABLES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TABLEVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TABLEVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_TABLE_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_TABLE_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_COLUMN_GROUPS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_COLUMN_GROUPS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CUBES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CUBES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CUBE_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CUBE_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DIMENSION_CALC_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DIMENSION_CALC_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DIMENSION_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DIMENSION_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FACT_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FACT_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FACT_ENTITIES_JOINS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FACT_ENTITIES_JOINS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_HIERARCHIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_HIERARCHIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_HIERARCHY_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_HIERARCHY_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_HIERARCHY_ROLLUP_LINKS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_HIERARCHY_ROLLUP_LINKS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LEVELS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LEVELS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_LEVEL_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_LEVEL_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_REGLA_NEGOCIO_CONDICION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_REGLA_NEGOCIO_CONDICION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_REGLA_NEGOCIO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_REGLA_NEGOCIO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_REGLA_NEGOCIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_REGLA_NEGOCIO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_RECLAM_QUEM2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_RECLAM_QUEM2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_RECLAM_QUEM3.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_RECLAM_QUEM3'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLE_INCLUDE_SCRIPTS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLE_INCLUDE_SCRIPTS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TELEPHONES_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TELEPHONES_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_PACKS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_PACKS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_PACKS_FK_MODEL_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_PACKS_FK_MODEL_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_TASKS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_TASKS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_TASKS_FK_PACK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_TASKS_FK_PACK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_TASK_INFOS_FK1_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_TASK_INFOS_FK1_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_TASK_INFOS_FK2_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_TASK_INFOS_FK2_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_FLOWS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_FLOWS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORM_FLOWS_FK_TASK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORM_FLOWS_FK_TASK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORMS_PK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORMS_PK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TRANSFORMS_FK_TASK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRANSFORMS_FK_TASK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_VIEW_COLUMNS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'VIEW_COLUMNS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_VIEW_CONTAINERS_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'VIEW_CONTAINERS_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_VIEW_ORDER_GROUPBY_FK_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'VIEW_ORDER_GROUPBY_FK_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ATTRIBUTES_CONTAINER_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ATTRIBUTES_CONTAINER_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_SOLICITUD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SOLICITUD'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_CATALOGO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPINGS_REL_OBJ_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPINGS_REL_OBJ_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MAPPINGS_LOG_OBJ_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MAPPINGS_LOG_OBJ_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_VL_DATAELEMENT_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'VL_DATAELEMENT_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_AVT_DATAELEMENT_OVID_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'AVT_DATAELEMENT_OVID_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_CC_DATAELEMENT_OVID_DX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'CC_DATAELEMENT_OVID_DX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PROCESS_ENTS_ENT_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PROCESS_ENTS_ENT_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLES_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLES_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MODELS_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MODELS_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DESIGNS__IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DESIGNS__IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAMS_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAMS_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_IDX1_PROCESO_PASO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'IDX1_PROCESO_PASO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_DIAGRAM_ELEMENTS_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIAGRAM_ELEMENTS_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TABLE_ARC_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLE_ARC_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_ENTITY_ARC_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'ENTITY_ARC_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SENSITIVE_TYPE_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SENSITIVE_TYPE_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TSDP_POLICY_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TSDP_POLICY_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_TSDP_SP_POLICY_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TSDP_SP_POLICY_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_MASK_TEMPLATE_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'MASK_TEMPLATE_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXISTENCE_DEP_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXISTENCE_DEP_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_EXISTENCE_DEP_COL_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'EXISTENCE_DEP_COL_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FK_CD_CONSTR_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FK_CD_CONSTR_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_FK_CD_CONSTR_COL_NAME_IDX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'FK_CD_CONSTR_COL_NAME_IDX'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_GLOSSARIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_GLOSSARIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_GLOSSARY_TERMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_GLOSSARY_TERMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_GLOSSARIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_GLOSSARIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_GLOSSARY_TERMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_GLOSSARY_TERMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRS_VDIAGRAMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_VDIAGRAMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_RECLASIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_RECLASIFICACION'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_TRATAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRATAMENTO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_SOLICITUDES_TEMP.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_SOLICITUDES_TEMP'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ACCION_CTG_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ACCION_CTG_TLV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_ACCION_CTG_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_ACCION_CTG_TLV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_CONTINGENCIA_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CONTINGENCIA_TLV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_CONTINGENCIA_TLV.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_CONTINGENCIA_TLV'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_COTIZACION2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_COTIZACION2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_ARGUMENTOS2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_ARGUMENTOS2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBBPPJ5KD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBBPPJ5KD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0085398.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0085398'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_WMTBPPJ5KD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMTBPPJ5KD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_3.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_3'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_4.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_4'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_5.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_5'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_6.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_6'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_CAT_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_CAT_CLASSIF123'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_ESTRUCTURA_HIS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_ESTRUCTURA_HIS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SALIDA_CAT_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_CAT_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_INTERVENCION_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_INTERVENCION_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SALIDA_CAT_UPDATE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_CAT_UPDATE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SALIDA_CAT_DELETE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_CAT_DELETE'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_MPA_1_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_MPA_1_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_BPM_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_BPM_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_BPM_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_BPM_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ADDITIONAL_CT_OBJECTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ADDITIONAL_CT_OBJECTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_COLLECTION_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_COLLECTION_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_COLUMN_UI.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_COLUMN_UI'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONSTR_INDEX_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONSTR_INDEX_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONSTR_FK_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONSTR_FK_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONTACTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONTACTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONTACT_EMAILS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONTACT_EMAILS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_TELEFONE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TELEFONE'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_INTERVENCION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_INTERVENCION'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_PAGAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_PAGAMENTO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR_REL\Synonyms\BPMAPP_BR_REL_BPM_APER_CORREO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CORREO'
+and a.OWNER = 'BPMAPP_BR_REL'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONTACT_LOCATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONTACT_LOCATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONTACT_RES_LOCATORS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONTACT_RES_LOCATORS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_CONTACT_TELEPHONES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_CONTACT_TELEPHONES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DATA_FLOW_DIAGRAM_INFOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DATA_FLOW_DIAGRAM_INFOS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOCUMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOCUMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOCUMENT_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOCUMENT_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOMAINS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOMAINS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOMAIN_AVT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOMAIN_AVT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOMAIN_CHECK_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOMAIN_CHECK_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DOMAIN_VALUE_RANGES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DOMAIN_VALUE_RANGES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DIAGRAM_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DIAGRAM_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DIAGRAMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DIAGRAMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_DISTINCT_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_DISTINCT_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EMAILS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EMAILS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_DIRECIONAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_DIRECIONAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_ENTITYVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_ENTITYVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_DIRECIONAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_DIRECIONAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EVENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EVENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXTERNAL_AGENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXTERNAL_AGENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXT_AGENT_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXT_AGENT_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXT_AGENT_EXT_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXT_AGENT_EXT_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CAT_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CAT_CLASSIF123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CAT_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CAT_CLASSIF123'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_EXTERNAL_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_EXTERNAL_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FLOW_INFO_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FLOW_INFO_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_PROC_PROD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROC_PROD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_PROC_PROD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_PROC_PROD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_FOREIGNKEYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_FOREIGNKEYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_INDEXES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_INDEXES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_INFO_STORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_INFO_STORES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_INFO_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_INFO_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_INFO_STRUCT_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_INFO_STRUCT_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_KEYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_KEYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_DMRS_KEY_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRS_KEY_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SALIDA_CAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_CAT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_SRN_CAMVAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_SRN_CAMVAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SRN_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SRN_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BPM_SRN_CAMMCA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BPM_SRN_CAMMCA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_REGVINCULO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_REGVINCULO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_REGLA_SLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_REGLA_SLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_REGLA_SLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_REGLA_SLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_CONSULTA_SOLICITUDES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONSULTA_SOLICITUDES'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ACEPTACIONTX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ACEPTACIONTX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_LISTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_LISTA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CAMPO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CAMPO_TAREA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_CONSULTA_SOLICITUDES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_CONSULTA_SOLICITUDES'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_DOCUMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_DOCUMENTO_INSTANCIATX.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_DOCUMENTO_INSTANCIATX'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_EXPRESION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_EXPRESION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_NIVELROLSUPERVISOR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_NIVELROLSUPERVISOR'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_CONSULTA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONSULTA'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_NOTIFICACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_NOTIFICACION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_ROL_DIMENSION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_ROL_DIMENSION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_SEGURIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SEGURIDAD'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_SQL_INS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_SQL_INS'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_UNIONPASOS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_UNIONPASOS'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_VERSION_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VERSION_PROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Outros\BPMAPP_SYS_LOB0000322718C00004$$.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_LOB0000322718C00004$$'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'LOB'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_VERSION_PROCESO_INSERT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_VERSION_PROCESO_INSERT'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_REPORTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_REPORTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_REPORTS_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_REPORTS_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_REPORTS_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_REPORTS_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_FICHEROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_FICHEROS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_PROCESO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_PROCESO_TAREA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_ALERTAS_TIPO_REGLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ALERTAS_TIPO_REGLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_ALERTAS_TIPO_REGLA_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ALERTAS_TIPO_REGLA_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_ALERTAS_TIPO_REGLA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ALERTAS_TIPO_REGLA_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_PROCESO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_TAREA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_PROCESO_TAREA_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_TAREA_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_PROCESO_FILTROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_FILTROS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_PROCESO_FILTROS_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_FILTROS_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_PROCESO_FILTROS_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_FILTROS_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_FICHEROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_FICHEROS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_FICHEROS_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_FICHEROS_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_FICHEROS_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_FICHEROS_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_PROCESO_TAREA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_TAREA'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_PROCESO_FILTROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PROCESO_FILTROS'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_FICHEROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_FICHEROS'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_T_CONTINGENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'T_CONTINGENCIA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Types\spec\BPMAPP_BR_TA_CONTINGENCIA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TA_CONTINGENCIA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TYPE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_CONFIG_REPORTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_CONFIG_REPORTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_INFO_TRANS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INFO_TRANS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKINFO_TRANS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKINFO_TRANS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_REINT_TRANS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'REINT_TRANS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKREINT_TRANS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKREINT_TRANS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BKO_REGVINCULO1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BKO_REGVINCULO1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TR_BKO_ALERTAS_TIPO_REGLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_BKO_ALERTAS_TIPO_REGLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_PROCESO_FILTROS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_PROCESO_FILTROS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN_INTERVINIENTE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_INTERVINIENTE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_ALERTAS_TIPO_REGLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_ALERTAS_TIPO_REGLA'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_REGLAS_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_REGLAS_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_ROLES_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_ROLES_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_ROLES_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_ROLES_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_ROLES_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_ROLES_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_SALIDA_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_SALIDA_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_SALIDA_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_SALIDA_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_VALORTX_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VALORTX_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPPBR_APP2\Synonyms\BPMAPPBR_APP2_BKO_REGVINCULO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_REGVINCULO'
+and a.OWNER = 'BPMAPPBR_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_CTVA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_CTVA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_COLABORATIVA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_COLABORATIVA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_COLABORATIVA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_COLABORATIVA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_VERSION_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_VERSION_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_VERSION_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_VERSION_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_VERSION_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_VERSION_SRN'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CTS1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CTS1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CTS2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CTS2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_CTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CTS'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_PARCEI_ESTIPU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_PARCEI_ESTIPU'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_PARCEI_ESTIPU1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_PARCEI_ESTIPU1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_PARCEI_ESTIPU2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_PARCEI_ESTIPU2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_PARCEI_ESTIPU3.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_PARCEI_ESTIPU3'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_PARCEI_ESTIPU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_PARCEI_ESTIPU'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_RECLAM_QUEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_RECLAM_QUEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_RECLAM_QUEM1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_RECLAM_QUEM1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CANCOM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CANCOM1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CANCOM1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CANCOM2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CANCOM2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_CANCOM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CANCOM'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SRN_PARCEIRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SRN_PARCEIRO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN_PARCEIRO_CLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_PARCEIRO_CLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_SRN_PARCEIRO_CLA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_SRN_PARCEIRO_CLA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_SRN_PARCEIRO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_SRN_PARCEIRO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDX_AUX_SRN_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDX_AUX_SRN_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDX_SALIDA_SRN_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDX_SALIDA_SRN_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BKO_PARAMETROS_GESTION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PARAMETROS_GESTION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_PARAMETROS_GESTION_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PARAMETROS_GESTION_PK'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_BKO_PARAMETROS_GESTION_UK1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BKO_PARAMETROS_GESTION_UK1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_DIRECIONAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_DIRECIONAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_DIRECIONAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_DIRECIONAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XIF1BPM_APER_DIRECIONAMENTO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XIF1BPM_APER_DIRECIONAMENTO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_TIPO_CAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_TIPO_CAT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_HISTORICO_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_HISTORICO_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_HISTORICO_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_HISTORICO_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_NOMBRE_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_NOMBRE_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_APER_NOMBRE_CAMPO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_APER_NOMBRE_CAMPO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_WMBBSMDFMW.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'WMBBSMDFMW'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0089251.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0089251'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Triggers\BPMAPP_BR_TRG_BKO_PARAMETROS_GESTION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TRG_BKO_PARAMETROS_GESTION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA1_TRAZA_DOCUMENTUM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA1_TRAZA_DOCUMENTUM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_CANENT_ORIGEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CANENT_ORIGEM'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CANENT_ORIGEM1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CANENT_ORIGEM1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CANENT_ORIGEM2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CANENT_ORIGEM2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_AUX_CANENT_ORIGEM3.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_AUX_CANENT_ORIGEM3'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_CANENT_ORIGEM.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CANENT_ORIGEM'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_REGLAS_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_REGLAS_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PASO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_SUBPROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PASO_SUBPROCESO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_SUBPROCESO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_MAPEO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_MAPEO_SUBPROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_MAPEO_SUBPROCESO_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_MAPEO_SUBPROCESO_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_CONFIGBTW.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONFIGBTW'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PROCESO_CONFIGBTW_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONFIGBTW_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_PROCESO_BTW_MENU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_BTW_MENU'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_TEST_SRN.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_TEST_SRN'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_DIN_PROCESO_BTW_MENU_PK.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_BTW_MENU_PK'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_PASO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_PASO_SUBPROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_MAPEO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_MAPEO_SUBPROCESO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Triggers\BPMAPP_TR_DIN_PROCESO_CONFIGBTW.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TR_DIN_PROCESO_CONFIGBTW'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TRIGGER'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_MAPEO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_MAPEO_SUBPROCESO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PASO_SUBPROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PASO_SUBPROCESO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_BTW_MENU.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_BTW_MENU'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_PROCESO_CONFIGBTW.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_PROCESO_CONFIGBTW'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_SYS_C0085018.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'SYS_C0085018'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_AUX_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BPM_PROCESO_AUX_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BPM_PROCESO_AUX_CATALOGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_CLASSIF123.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CLASSIF123'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_PROCESO_AUX_CATALOGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_AUX_CATALOGO'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_TEMP_SRN_CLAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TEMP_SRN_CLAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Tables\BPMAPP_DIN_INTERNACIONALIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_INTERNACIONALIZACION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\indexes\BPMAPP_PK_DIN_INTERNACIONALIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_DIN_INTERNACIONALIZACION'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_INTERNACIONALIZACION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_INTERNACIONALIZACION'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_APP2\Synonyms\BPMAPP_APP2_DIN_VERSION_PROCESO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DIN_VERSION_PROCESO'
+and a.OWNER = 'BPMAPP_APP2'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_ADJUNTOS_CORREO_ERROR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_ADJUNTOS_CORREO_ERROR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_CORREO_ERROR1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_CORREO_ERROR1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_CORREO_ERROR2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_CORREO_ERROR2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP\Synonyms\BPMAPP_BPM_APER_ADJUNTOS_CORREO_ERROR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ADJUNTOS_CORREO_ERROR'
+and a.OWNER = 'BPMAPP'
+and a.OBJECT_TYPE = 'SYNONYM'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_APER_ADJUNTOS_CORREO_ERROR.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_APER_ADJUNTOS_CORREO_ERROR'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_PK_BKO_ARGUMENTO_RIESGO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'PK_BKO_ARGUMENTO_RIESGO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_FLOW_INFO_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_FLOW_INFO_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_FLOWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_FLOWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_FOREIGNKEYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_FOREIGNKEYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_INDEXES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_INDEXES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_INFO_STORES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_INFO_STORES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_INFO_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_INFO_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_INFO_STRUCT_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_INFO_STRUCT_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TASK_PARAMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TASK_PARAMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TASK_PARAMS_ITEMS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TASK_PARAMS_ITEMS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_KEYS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_KEYS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_KEY_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_KEY_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_KEY_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_KEY_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LOCATIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LOCATIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LOGICAL_TO_NATIVE.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LOGICAL_TO_NATIVE'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_LOGICAL_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_LOGICAL_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MAPPINGS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MAPPINGS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MAPPING_TARGETS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MAPPING_TARGETS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_MAPPING_TARGET_SOURCES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_MAPPING_TARGET_SOURCES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_NATIVE_TO_LOGICAL.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_NATIVE_TO_LOGICAL'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_NOTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_NOTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_PK_OID_COLUMNS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_PK_OID_COLUMNS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_PROCESS_ATTRIBUTES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_PROCESS_ATTRIBUTES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_PROCESS_ENTITIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_PROCESS_ENTITIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_PROCESSES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_PROCESSES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RDBMS_SITES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RDBMS_SITES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RECORD_STRUCTURES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RECORD_STRUCTURES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RECORD_STRUCT_EXT_DATAS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RECORD_STRUCT_EXT_DATAS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RELATIONSHIPS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RELATIONSHIPS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RESOURCE_LOCATORS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RESOURCE_LOCATORS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RESPONSIBLE_PARTIES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RESPONSIBLE_PARTIES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RES_PARTY_CONTACTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RES_PARTY_CONTACTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_RES_PARTY_ELEMENTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_RES_PARTY_ELEMENTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ROLES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ROLES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_ROLE_PROCESSES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_ROLE_PROCESSES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SOURCE_INFO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SOURCE_INFO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SPATIAL_COLUMN_DEFINITION.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SPATIAL_COLUMN_DEFINITION'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_SPATIAL_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_SPATIAL_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_STRUCTURED_TYPES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_STRUCTURED_TYPES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_STRUCT_TYPE_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_STRUCT_TYPE_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_STRUCT_TYPE_METHODS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_STRUCT_TYPE_METHODS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_STRUCT_TYPE_METHOD_PARS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_STRUCT_TYPE_METHOD_PARS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TABLES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TABLES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TABLEVIEWS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TABLEVIEWS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_TABLE_CONSTRAINTS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_TABLE_CONSTRAINTS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_COLUMN_GROUPS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_COLUMN_GROUPS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CUBES.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CUBES'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_CUBE_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_CUBE_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DIMENSIONS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DIMENSIONS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Views\BPMAPP_BR_DMRV_DIMENSION_CALC_ATTRS.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'DMRV_DIMENSION_CALC_ATTRS'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'VIEW'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_TASK_ID.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_TASK_ID'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_TABLA_PRUEBA.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'TABLA_PRUEBA'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_COMENTARIO.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_COMENTARIO'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_MPA_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_MPA_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_XPKBPM_MPA_TRAZABILIDAD.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'XPKBPM_MPA_TRAZABILIDAD'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\Tables\BPMAPP_BR_BPM_PROCESO_SALIDA_CAT.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'BPM_PROCESO_SALIDA_CAT'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'TABLE'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_SALIDA_1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_SALIDA_1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_SALIDA_2.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_SALIDA_2'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_INDEX_SALIDA_3.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'INDEX_SALIDA_3'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+spool C:\temp\SGO\BPMAPP_BR\indexes\BPMAPP_BR_I_BKO_COTIZACION1.sql
+select DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script
+FROM all_objects a
+where a.OBJECT_NAME = 'I_BKO_COTIZACION1'
+and a.OWNER = 'BPMAPP_BR'
+and a.OBJECT_TYPE = 'INDEX'
+order by a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;
+spool off
+
+exit;
