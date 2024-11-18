@@ -204,8 +204,8 @@ function copyFilesToFolders([string]$structure) {
 #Gera o arquivo chamador
 function createScriptCaller() {
 
-	$error = validateFiles($db_files)
-	if ($error -eq 1){
+	$validationError = validateFiles($db_files)
+	if ($validationError -eq 1){
 		Write-Output "######## Nao existe plano de rollback. Arquivo $rollback_file nao encontrado!"
 		return
 	}	
@@ -223,8 +223,8 @@ function createScriptCaller() {
 	Write-Output "@@chamador-status-$DefinitionName-$BuildNumber.sql" | Out-File -Encoding UTF8 -Append $sql_file	
 
 	Get-Content $temp_db_files | ForEach-Object {
-		$_ = $_.replace("\","/") 
-		Write-Output "@@script/$_" | Out-File -Encoding UTF8 -Append $sql_file
+		$line = $_.replace("\","/") 
+		Write-Output "@@script/$line" | Out-File -Encoding UTF8 -Append $sql_file
 	}
 	
 	Write-Output "@@chamador-status-$DefinitionName-$BuildNumber.sql" | Out-File -Encoding UTF8 -Append $sql_file	
@@ -311,8 +311,9 @@ end;
 	Get-Content $temp_db_files | ForEach-Object {
 
 		$file_name = getFileName($_);
-		$_ = $_.replace("\","/") 
-		
+		$itemAtual = $_
+		$itemAtual = $itemAtual -replace "\\", "/"
+
 		Write-Output "SPOOL 'backup/$_'" | Out-File -Encoding UTF8 -Append $sql_file		
        Write-Output "SELECT DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script FROM dba_objects a WHERE OBJECT_NAME=replace(upper('$file_name'),'TRON2000_','') and  OWNER = 'TRON2000' ORDER BY a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;" | Out-File -Encoding UTF8 -Append $sql_file		
        Write-Output "SPOOL OFF;" | Out-File -Encoding UTF8 -Append $sql_file
@@ -334,8 +335,8 @@ end;
 	Write-Output "" | Out-File -Encoding UTF8 -Append $sql_file2		
 
 	Get-Content $temp_db_files | ForEach-Object {
-		$_ = $_.replace("\","/") 
-		Write-Output "@@backup/$_" | Out-File -Encoding UTF8 -Append $sql_file2
+		$line = $_.replace("\","/") 
+		Write-Output "@@backup/$line" | Out-File -Encoding UTF8 -Append $sql_file2
 	}
 	
 	Write-Output "" | Out-File -Encoding UTF8 -Append $sql_file2
@@ -349,8 +350,8 @@ end;
 #Gera o arquivo chamador-rollback
 function createRollbackCaller() {
 
-	$error = validateFiles($rollback_file)
-	if ($error -eq 1){
+	$validationError = validateFiles($rollback_file)
+	if ($validationError -eq 1){
 		Write-Output "######## Nao existe plano de rollback. Arquivo $rollback_file nao encontrado!"
 		return
 	}
@@ -370,8 +371,8 @@ function createRollbackCaller() {
 	Write-Output "@@chamador-status-$DefinitionName-$BuildNumber.sql" | Out-File -Encoding UTF8 -Append $sql_file	
 
 	Get-Content $temp_rollback_file | ForEach-Object {
-		$_ = $_.replace("\","/") 
-		Write-Output "@@rollback/$_" | Out-File -Encoding UTF8 -Append $sql_file
+		$line = $_.replace("\","/") 
+		Write-Output "@@rollback/$line" | Out-File -Encoding UTF8 -Append $sql_file
 	}
 
 	Write-Output "@@chamador-status-$DefinitionName-$BuildNumber.sql" | Out-File -Encoding UTF8 -Append $sql_file	
