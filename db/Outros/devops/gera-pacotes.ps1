@@ -310,16 +310,15 @@ end;
 
 	Get-Content $temp_db_files | ForEach-Object {
 
-		$file_name = getFileName($_);
-		$itemAtual = $_
-		$itemAtual = $itemAtual -replace "\\", "/"
+		$file_name = getFileName($_)
+		$itemAtual = $_ -replace "\\", "/"
 
-		Write-Output "SPOOL 'backup/$_'" | Out-File -Encoding UTF8 -Append $sql_file		
-       Write-Output "SELECT DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script FROM dba_objects a WHERE OBJECT_NAME=replace(upper('$file_name'),'TRON2000_','') and  OWNER = 'TRON2000' ORDER BY a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;" | Out-File -Encoding UTF8 -Append $sql_file		
-       Write-Output "SPOOL OFF;" | Out-File -Encoding UTF8 -Append $sql_file
+		Write-Output "SPOOL 'backup/$_'" | Out-File -Encoding UTF8 -Append $sql_file
+		Write-Output "SELECT DBMS_METADATA.GET_DDL(REPLACE(a.OBJECT_TYPE,CHR(32),'_'),a.OBJECT_NAME,a.OWNER) as script FROM dba_objects a WHERE OBJECT_NAME=replace(upper('$file_name'),'TRON2000_','') and  OWNER = 'TRON2000' ORDER BY a.OBJECT_TYPE , a.OBJECT_NAME ,a.OWNER;" | Out-File -Encoding UTF8 -Append $sql_file
+		Write-Output "SPOOL OFF;" | Out-File -Encoding UTF8 -Append $sql_file
 		Write-Output "" | Out-File -Encoding UTF8 -Append $sql_file
 		Write-Output "######## Script SQL (para backup) $_ criado com sucesso"
-	}	
+	}
 	
 	Write-Output "QUIT" | Out-File -Encoding UTF8 -Append $sql_file
 	Write-Output "######## $sql_file criado com sucesso!"
